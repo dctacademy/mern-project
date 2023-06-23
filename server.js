@@ -1,5 +1,8 @@
 const express = require('express') 
+const configDB = require('./config/databse')
 const app = express() 
+
+configDB()
 
 app.get('/', (req, res) => {
     res.send('home page')
